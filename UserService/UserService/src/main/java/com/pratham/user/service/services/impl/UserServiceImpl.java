@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
             //http://localhost:8082/hotels/f7bc48f7-1659-40ff-8a67-5b1f6b2f5fef
             //ResponseEntity<Hotel> forEntity = restTemplate.getForEntity("http://HOTELSERVICE/hotels/"+rating.getHotelId(), Hotel.class);
             //Hotel hotel = forEntity.getBody();
-            Hotel hotel = hotelService.getHotel(rating.getHotelId());
+            Hotel hotel = hotelService.getHotel(rating.getHotelId()); // getting from external service Hotelservice through frign client
             //logger.info("response status code",forEntity.getStatusCode());
             //set the hotel to rating
             rating.setHotel(hotel);
